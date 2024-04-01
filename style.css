@@ -62,6 +62,12 @@ body {
     background-color: #f44336;
 }
 
+.entityChoiceButton {
+    padding: 8px 16px;
+    background-color: #e7e7e7;
+    color: black;
+}
+
 .entitiesContainer {
     width: 100%;
     height: auto;
@@ -92,4 +98,11 @@ body {
     width: 170px;
     height: 92px;
     transform: rotateY(180deg);
+    margin: 12px 0;
+}
+
+.monsterGif {
+    width: 170px;
+    height: 92px;
+    margin: 12px 0;
 }

@@ -1,5 +1,4 @@
-import { Player } from './entities/player.js';
-import { Monster } from './entities/monster.js';
+import { Unit } from './entities/unit.js';
 import { createPlayerComponent } from './components/newPlayer.js';
 import { createMonsterComponent } from './components/newMonster.js';
 
@@ -13,14 +12,15 @@ createNewPlayer.addEventListener('click', () => {
     // Logic creation new Player
     if (playerName) {
         // Creation player
-        const newPlayer = new Player(playerName);
+        const newPlayer = new Unit(playerName);
+        newPlayer.type = "Player"
         allPlayers.push(newPlayer)
-
+        
         // Creation of it in the DOM
         createPlayerComponent(newPlayer);
-
+        
         // Logging it
-        console.log(`Player ${allPlayers.indexOf(playerName) + 1} : ${newPlayer.name}`)
+        console.log(`Player ${allPlayers.indexOf(newPlayer) + 1} : ${newPlayer.name}`)
     } else {
         console.log("Something failed");
     }
@@ -36,15 +36,18 @@ createNewMonster.addEventListener('click', () => {
     // Logic creation new Monster
     if (monsterName) {
         // Creation monster
-        const newMonster = new Monster(monsterName);
+        const newMonster = new Unit(monsterName);
+        newMonster.type = "Monster"
         allMonsters.push(newMonster)
 
         // Creation of it in the DOM
         createMonsterComponent(newMonster);
 
         // Logging it
-        console.log(`Monster ${allMonsters.indexOf(monsterName) + 1} : ${newMonster.name}`)
+        console.log(`Monster ${allMonsters.indexOf(newMonster) + 1} : ${newMonster.name}`)
     } else {
         console.log("Something failed");
     }
 });
+
+
