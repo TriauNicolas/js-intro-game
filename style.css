@@ -32,6 +32,64 @@ body {
     width: 100%;
     height: 90%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+
+.buttonContainer {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.createNewPlayer {
+    background-color: #04AA6D;
+}
+
+.createNewMonster {
+    background-color: #f44336;
+}
+
+.entitiesContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.entities {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entitiesInfosContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6px 0;
+}
+
+.entitiesName {
+    color: white;
+    margin: 6px 0;
+}
+
+.heroGif {
+    width: 170px;
+    height: 92px;
+    transform: rotateY(180deg);
 }

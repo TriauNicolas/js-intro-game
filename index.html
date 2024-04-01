@@ -14,13 +14,21 @@
             <h1 class="gameTitle">JS Game</h1>
         </div>
         <div class="gameContainer">
-            <button class="createNewPlayer">
-                Create a new player
-            </button>
+            <div class="buttonContainer">
+                <button class="button createNewPlayer">
+                    Create a new player
+                </button>
+                <button class="button createNewMonster">
+                    Create a new monster
+                </button>
+            </div>
+            <div class="entitiesContainer">
+                <div class="entities allPlayers"></div>
+                <div class="entities allEnemies"></div>
+            </div>
         </div>
     </div>
-    <script src="./test.js"></script>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./mainComplete.js"></script>
 </body>
 
 </html>
