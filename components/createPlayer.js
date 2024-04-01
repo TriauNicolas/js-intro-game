@@ -22,7 +22,7 @@ export const createPlayer = (newPlayer) => {
     attackButton.classList.add('button', 'entityChoiceButton')
     attackButton.innerHTML = "Attack"
     attackButton.addEventListener('click', () => {
-        newMonster.attackRandomTarget()
+        newPlayer.attackRandomTarget()
     })
     newDiv.appendChild(attackButton)
 

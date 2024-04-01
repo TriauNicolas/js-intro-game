@@ -29,7 +29,6 @@ export class Unit {
         this.attack(target);
     }
 
-    // Assuming you have an `attack(target)` method defined elsewhere
     attack(target) {
         const damageDone = Math.floor(Math.random() * (this.maxDamage - this.minDamage + 1)) + this.minDamage;
         target.health -= damageDone;
