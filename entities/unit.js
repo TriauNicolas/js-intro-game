@@ -6,7 +6,7 @@ export class Unit {
         this.name = name;
         this.type = type
         this.health = 50;
-        this.minDamage = 5
+        this.minDamage = 5;
         this.maxDamage = 15;
 
         // Reference all the instances
@@ -21,7 +21,7 @@ export class Unit {
         if (target) {
             console.log(`${this.name} attacks Monster ${target.name}!`);
         } else {
-            console.log('No target found')
+            console.log('No target found');
             return
         }
 
@@ -31,7 +31,7 @@ export class Unit {
 
     // Assuming you have an `attack(target)` method defined elsewhere
     attack(target) {
-        const damageDone = Math.floor(Math.random() * (this.maxDamage - this.minDamage + 1)) + this.minDamage
+        const damageDone = Math.floor(Math.random() * (this.maxDamage - this.minDamage + 1)) + this.minDamage;
         target.health -= damageDone;
     }
 }

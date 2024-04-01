@@ -1,4 +1,4 @@
-export const createPlayerComponent = (newPlayer) => {
+export const createPlayer = (newPlayer) => {
     const game = document.querySelector('.allPlayers');
 
     // Create player container
@@ -22,10 +22,11 @@ export const createPlayerComponent = (newPlayer) => {
     attackButton.classList.add('button', 'entityChoiceButton')
     attackButton.innerHTML = "Attack"
     attackButton.addEventListener('click', () => {
-        newPlayer.attackRandomTarget()
+        newMonster.attackRandomTarget()
     })
     newDiv.appendChild(attackButton)
 
     // Append the div to the container
     game.appendChild(newDiv);
 }
+

@@ -1,10 +1,8 @@
 import { Unit } from './entities/unit.js';
-import { createPlayerComponent } from './components/newPlayer.js';
-import { createMonsterComponent } from './components/newMonster.js';
+import { createPlayer } from './components/createPlayer.js';
 
 // Players logic
-const allPlayers = []
-const createNewPlayer = document.querySelector('.createNewPlayer')
+const createNewPlayer = document.querySelector('.createNewPlayer');
 createNewPlayer.addEventListener('click', () => {
     // Getting the name
     const playerName = prompt('Enter player name:');
@@ -12,22 +10,19 @@ createNewPlayer.addEventListener('click', () => {
     // Logic creation new Player
     if (playerName) {
         // Creation player
-        const newPlayer = new Unit(playerName);
-        newPlayer.type = "Player"
-        allPlayers.push(newPlayer)
+        const newPlayer = new Unit(playerName, "Player");
         
         // Creation of it in the DOM
-        createPlayerComponent(newPlayer);
+        createPlayer(newPlayer);
         
         // Logging it
-        console.log(`Player ${allPlayers.indexOf(newPlayer) + 1} : ${newPlayer.name}`)
+        console.log(`New Player: ${newPlayer.name}`)
     } else {
         console.log("Something failed");
     }
 });
 
 // Monsters logic
-const allMonsters = []
 const createNewMonster = document.querySelector('.createNewMonster')
 createNewMonster.addEventListener('click', () => {
     // Getting the name
@@ -36,15 +31,13 @@ createNewMonster.addEventListener('click', () => {
     // Logic creation new Monster
     if (monsterName) {
         // Creation monster
-        const newMonster = new Unit(monsterName);
-        newMonster.type = "Monster"
-        allMonsters.push(newMonster)
+        const newMonster = new Unit(monsterName, "Monster");
 
         // Creation of it in the DOM
-        createMonsterComponent(newMonster);
+        createMonster(newMonster);
 
         // Logging it
-        console.log(`Monster ${allMonsters.indexOf(newMonster) + 1} : ${newMonster.name}`)
+        console.log(`New Monster : ${newMonster.name}`)
     } else {
         console.log("Something failed");
     }
