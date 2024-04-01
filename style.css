@@ -1,0 +1,19 @@
+@import 'reset.css';
+
+.main_container {
+    display: flex;
+    justify-content: center;
+}
+
+.title_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.game_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: red;
+}
