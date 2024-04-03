@@ -11,6 +11,13 @@ export const createPlayer = (newPlayer) => {
     newTitle.classList.add('entitiesName')
     newDiv.appendChild(newTitle);
 
+    // Create a title element
+    const newHealth = document.createElement('h3');
+    newHealth.textContent = `Health :  ${newPlayer.health}`;
+    newHealth.classList.add('entitiesName')
+    newHealth.classList.add(`health-${newPlayer.id}`)
+    newDiv.appendChild(newHealth);
+
     // Attribute the gif
     const newImage = document.createElement('img');
     newImage.src = "./images/hero.gif";

@@ -3,6 +3,7 @@ export class Unit {
 
     constructor (name, type) {
         // Entities properties
+        this.id = (Unit.instances.length).toString()
         this.name = name;
         this.type = type
         this.health = 50;
@@ -32,5 +33,7 @@ export class Unit {
     attack(target) {
         const damageDone = Math.floor(Math.random() * (this.maxDamage - this.minDamage + 1)) + this.minDamage;
         target.health -= damageDone;
+        const healthElementToUpdate = document.querySelector(`.health-${target.id}`)
+        healthElementToUpdate.textContent = `Health : ${(target.health).toString()}`
     }
 }

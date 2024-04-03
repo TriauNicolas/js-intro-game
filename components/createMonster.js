@@ -1,4 +1,4 @@
-export const createMonsterComponent = (newMonster) => {
+export const createMonster = (newMonster) => {
     const game = document.querySelector('.allEnemies');
 
     // Create player container
@@ -10,6 +10,13 @@ export const createMonsterComponent = (newMonster) => {
     newTitle.textContent = `I'm ${newMonster.name}`;
     newTitle.classList.add('entitiesName')
     newDiv.appendChild(newTitle);
+    
+    // Create a title element
+    const newHealth = document.createElement('h3');
+    newHealth.textContent = `Health : ${newMonster.health}`;
+    newHealth.classList.add(`health-${newMonster.id}`)
+    newHealth.classList.add('entitiesName')
+    newDiv.appendChild(newHealth);
 
     // Attribute the gif
     const newImage = document.createElement('img');

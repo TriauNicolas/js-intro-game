@@ -1,5 +1,6 @@
 import { Unit } from './entities/unit.js';
 import { createPlayer } from './components/createPlayer.js';
+import { createMonster } from './components/createMonster.js';
 
 // Players logic
 const createNewPlayer = document.querySelector('.createNewPlayer');
